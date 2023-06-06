@@ -45,7 +45,7 @@ namespace VideoGamesBackend.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest($"Hubo un error en el detalle del videojuegos: {ex.Message}");
+                return BadRequest($"Hubo un error en el detalle del videojuego: {ex.Message}");
             }
         }
 
@@ -65,7 +65,7 @@ namespace VideoGamesBackend.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest($"Hubo un error al borrar el videojuegos: {ex.Message}");
+                return BadRequest($"Hubo un error al borrar el videojuego: {ex.Message}");
             }
         }
 
@@ -84,7 +84,7 @@ namespace VideoGamesBackend.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest($"Hubo un error al crear el videojuegos: {ex.Message}");
+                return BadRequest($"Hubo un error al crear el videojuego: {ex.Message}");
             }
         }
 
