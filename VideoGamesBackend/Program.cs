@@ -17,10 +17,15 @@ const string ConectionName = "VideogamesApiDB";
 // obtenemos la ruta de coenccion a la base de datos
 var conectionString = builder.Configuration.GetConnectionString(ConectionName);
 // añadimos el servicio para utilizar SqlServer y la base de datos
-builder.Services.AddDbContext<AppDbContext>(options =>
-{
-    options.UseSqlServer(conectionString);
-});
+//builder.Services.AddDbContext<AppDbContext>(options =>
+//{
+//options.UseSqlServer(conectionString);
+//});
+
+// llamo a la clase de DbContext que se encarga de cargar y guardar los videojeugos traidos de la API a base de datos
+var gameController = new GameController();
+await gameController.SaveVideogamesToDB();
+
 
 // CORS
 builder.Services.AddCors(options =>

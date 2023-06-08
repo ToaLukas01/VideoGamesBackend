@@ -74,7 +74,7 @@ namespace VideoGamesBackend.Controllers
         {
             try
             {
-                if(videogame.Name == null || videogame.Description == null || videogame.Platformas == null)
+                if(videogame.Name == null || videogame.Description == null)
                 {
                     return BadRequest($"El videojeugo debe tener campos obligatorios como el nombre, descripcion y plataformas");
                 }
@@ -107,7 +107,7 @@ namespace VideoGamesBackend.Controllers
                 updateGame.Description = videogame.Description;
                 updateGame.ReleaseDate = videogame.ReleaseDate;
                 updateGame.Rating = videogame.Rating;
-                updateGame.Platformas = videogame.Platformas;
+                //updateGame.Platformas = videogame.Platformas;
                 updateGame.Genres = videogame.Genres;
                 updateGame.CreateDB = videogame.CreateDB;
 

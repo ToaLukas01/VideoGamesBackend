@@ -12,8 +12,8 @@ namespace VideoGamesBackend.Models
         public string Description { get; set; } = string.Empty;
         public DateTime? ReleaseDate { get; set; } // esta propiedad podria llegar vacia /  no obligatoria
         public int Rating { get; set; }
-        [Required]
-        public string[] Platformas { get; set; } = new string[] { };
+        //[Required]
+        //public string[] Platformas { get; set; } = new string[] { };
         public ICollection<Genre> Genres { get; set; } = new List<Genre>(); // aqui armamos la relacion entre los videojuegos y los generos
         public bool CreateDB { get; set;} = false;
 
